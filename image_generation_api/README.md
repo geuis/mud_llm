@@ -22,16 +22,16 @@ Activate
 
 Dependencies
 ```
-pip3 install diffusers transformers accelerate  --upgrade
-pip3 install fastapi --upgrade
+pip3 install diffusers transformers accelerate fastapi --upgrade
+
 ```
 
 # Subsequent use
 Activate
 
-```
+<!-- ```
 . ./.venv/bin/activate
-```
+``` -->
 
  <!-- │                                                     │                                                                                                                                                                       
  │  Serving at: http://127.0.0.1:8000                  │                                                                                                                                                                       
@@ -41,3 +41,6 @@ Activate
  │  Running in development mode, for production use:   │                                                                                                                                                                       
  │                                                     │                                                                                                                                                                       
  │  fastapi run   -->
+
+ ./run.sh
+ 

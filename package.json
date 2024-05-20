@@ -5,7 +5,8 @@
   "main": "app.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --env-file=.env app.mjs"
+    "start": "node --env-file=.env app.mjs",
+    "dev": "nodemon --env-file=.env app.mjs"
   },
   "author": "",
   "license": "ISC",

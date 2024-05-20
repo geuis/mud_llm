@@ -1,5 +1,5 @@
 {
   "ext": "js,mjs,jsx,json,html",
   "verbose": true,
-  "ignore": ["**/*.json", "**/*.jpg"]
+  "ignore": ["**/*.json", "**/*.jpg", "**/*.log"]
 }

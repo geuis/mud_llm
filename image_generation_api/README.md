@@ -23,7 +23,6 @@ Activate
 Dependencies
 ```
 pip3 install diffusers transformers accelerate fastapi --upgrade
-
 ```
 
 # Subsequent use
@@ -43,4 +42,3 @@ Activate
  │  fastapi run   -->
 
  ./run.sh
- 

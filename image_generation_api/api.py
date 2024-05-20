@@ -6,6 +6,7 @@ from fastapi import FastAPI, Response, HTTPException
 from pydantic import BaseModel
 from io import BytesIO
 import re
+from pathlib import Path
 
 # device = torch.device("mps")
 # https://www.mindfiretechnology.com/blog/archive/an-introduction-to-hugging-face-and-their-pipelines/
@@ -19,22 +20,26 @@ pipe = AutoPipelineForText2Image.from_pretrained(
 pipe.to("mps")
 
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 
 class Prompt(BaseModel):
+    id: str
     description: str
+
 
 # prompt = "A knight wearing golden armor, in the style of a Magic the Gathering card."
 # curl -X POST -H "Content-Type: application/json" -d '{"description": "Your prompt description here"}' http://localhost:8000/api/generate
 
+
 @app.post("/api/generate")
 async def generate_image(prompt: Prompt):
+    roomId = prompt.id
     promptDescription = prompt.description
     # Generate a short name based on the description
     short_name = generate_short_name(promptDescription)
-    # Create a filename with the short name and .png extension
-    filename = f"{short_name}.png"
+    # Create a filename with the short name and .jpg extension
+    #filename = f"{short_name}.jpg"
 
     try:
         image = pipe(
@@ -45,20 +50,36 @@ async def generate_image(prompt: Prompt):
 
     img_bytes = BytesIO()
     try:
-        image.save(img_bytes, format="PNG")
+        image.save(img_bytes, format="JPEG")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error saving image: {str(e)}")
 
     img_bytes = img_bytes.getvalue()
 
-    # save the image to disk for debugging
-    # image.save(f"./images/{filename}_apisave.png")
+# print(__file__)
+# data_imgs_dir = Path("../data/room_images").resolve()
+
+# print(data_imgs_dir)
+# print(f"{data_imgs_dir}/123.jpg")
+
+
+# file1 = open(f"{data_imgs_dir}/123.txt", "w")
+# s = "Hello\n"
+
+# # Writing a string to file
+# file1.write(s)
+
+    # save the image to disk
+    data_imgs_dir = Path('../data/room_images').resolve()
+    print(f"{data_imgs_dir}/{roomId}.jpg")
+    image.save(f"{data_imgs_dir}/{roomId}.jpg")
 
     # Create a response object with the image data
-    response = Response(content=img_bytes, media_type="image/png")
-    response.headers["Content-Disposition"] = f"attachment; filename={filename}"
+    # response = Response(content=img_bytes, media_type="image/png")
+    # response.headers["Content-Disposition"] = f"attachment; filename={filename}"
 
-    return response
+    # return response
+    return {"status": "ok"}
 
 
 def generate_short_name(description: str):

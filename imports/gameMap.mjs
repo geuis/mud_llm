@@ -1,5 +1,6 @@
 import { writeFileSync } from 'fs';
 import { createInterface } from 'readline';
+import terminalImage from 'terminal-image';
 import moveRoom from './moveRoom.mjs';
 import addRoom from './addRoom.mjs';
 
@@ -38,8 +39,8 @@ class GameMap {
         'Commands are map, help.'
       );
     },
-    look: () => {
-      this.displayRoom();
+    look: async () => {
+      await this.displayRoom();
     }
   };
 
@@ -51,8 +52,8 @@ class GameMap {
     }
   }
 
-  promptPlayer() {
-    this.displayRoom();
+  async promptPlayer() {
+    await this.displayRoom();
 
     readline.question('Enter a direction or command: ', async (input) => {
       if (this.commands[input]) {
@@ -67,11 +68,14 @@ class GameMap {
     });
   }
 
-  displayRoom() {
+  async displayRoom() {
     const room = this.rooms[this.currentRoomId];
 
     // console.log(`\n${this.currentRoomId}`);
     console.log(`${room.name}\n${room.description}`);
+
+    console.log(await terminalImage.file(`./data/room_images/${room.id}.jpg`, { width: '50%', height: '50%' }));
+
     console.log('Exits:');
 
     for (let key in room.exits) {

@@ -1,4 +1,19 @@
-async function moveRoom (direction) {
+import { existsSync } from 'fs';
+import generateRoomImage from './generateRoomImage.mjs';
+
+const checkRoomImage = async (description, roomId) => {
+  // check if room has image
+  if (!existsSync(`${process.cwd()}/data/room_images/${roomId}.jpg`)) {
+    try {
+      const imageId = await generateRoomImage(description, roomId);
+    } catch (err) {
+      console.error('Error generating image for room:', roomId);
+      console.error(err);
+    }
+  }
+};
+
+async function moveRoom(direction) {
   const availableExits = this.rooms[this.currentRoomId].exits;
 
   if (!(direction in availableExits)) {
@@ -13,6 +28,8 @@ async function moveRoom (direction) {
   if (this.rooms[roomId]) {
     this.currentRoomId = roomId;
 
+    await checkRoomImage(this.rooms[roomId].description, roomId);
+
     return;
   }
 
@@ -25,6 +42,8 @@ async function moveRoom (direction) {
   });
 
   this.currentRoomId = roomId;
+
+  await checkRoomImage(this.rooms[roomId].description, roomId);
 }
 
 export default moveRoom;

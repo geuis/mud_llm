@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "groq-sdk": "^0.3.3"
+    "groq-sdk": "^0.3.3",
+    "terminal-image": "^2.0.0"
   }
 }

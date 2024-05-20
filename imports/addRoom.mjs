@@ -1,5 +1,6 @@
 import { randomUUID } from 'crypto';
 import generateRoomDescription from './generateRoomDescription.mjs';
+import generateRoomImage from './generateRoomImage.mjs';
 
 async function addRoom({ id = randomUUID(), name = null, description = null, numberOfExits = 4, previousRoomId = null, previousDirection = null }) {
   const room = {
@@ -55,6 +56,14 @@ async function addRoom({ id = randomUUID(), name = null, description = null, num
 
     room.name = roomName;
     room.description = roomDescription;
+  }
+
+  try {
+    const imageId = await generateRoomImage(room.description, room.id);
+
+    console.log(imageId);
+  } catch (err) {
+    console.error('Error generating image for room:', room.id);
   }
 
   // add the new room to the map

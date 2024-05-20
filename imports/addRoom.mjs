@@ -1,7 +1,6 @@
 import { randomUUID } from 'crypto';
 import generateRoomDescription from './generateRoomDescription.mjs';
 
-// const addRoom = async ({ id = randomUUID(), name = null, description = null, numberOfExits = 4, previousRoomId = null, previousDirection = null }) => {
 async function addRoom({ id = randomUUID(), name = null, description = null, numberOfExits = 4, previousRoomId = null, previousDirection = null }) {
   const room = {
     id,
@@ -48,7 +47,11 @@ async function addRoom({ id = randomUUID(), name = null, description = null, num
 
   // generate the room name and description via LLM
   if (!name || !description) {
-    const { roomName, roomDescription } = await generateRoomDescription();
+    const { roomName, roomDescription } = await generateRoomDescription(this.rooms[this.currentRoomId].description, opposing[previousDirection]);
+
+    if (!roomName || !roomDescription) {
+      throw new Error('There was an error generating the room name or description');
+    }
 
     room.name = roomName;
     room.description = roomDescription;
@@ -57,10 +60,7 @@ async function addRoom({ id = randomUUID(), name = null, description = null, num
   // add the new room to the map
   this.rooms[room.id] = room;
 
-  // sets the initial room id such as for the very first room at the start
-  if (!this.currentRoomId) {
-    this.currentRoomId = room.id;
-  }
+  this.saveMap();
 };
 
 export default addRoom;

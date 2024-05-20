@@ -1,6 +1,9 @@
+import { writeFileSync } from 'fs';
 import { createInterface } from 'readline';
 import moveRoom from './moveRoom.mjs';
 import addRoom from './addRoom.mjs';
+
+const mapJsonPath = `${process.cwd()}/data/map.json`;
 
 // Create the readline interface once
 const readline = createInterface({
@@ -19,7 +22,12 @@ class GameMap {
   }
 
   validDirections = new Set(['n', 'e', 's', 'w']);
-
+  // directionNames = {
+  //   n: 'north',
+  //   e: 'east',
+  //   s: 'south',
+  //   w: 'west'
+  // };
   commands = {
     map: () => {
       console.log(this.rooms);
@@ -34,6 +42,14 @@ class GameMap {
       this.displayRoom();
     }
   };
+
+  saveMap() {
+    try {
+      writeFileSync(mapJsonPath, JSON.stringify(this.rooms, null, 2));
+    } catch (err) {
+      throw err;
+    }
+  }
 
   promptPlayer() {
     this.displayRoom();
@@ -52,16 +68,14 @@ class GameMap {
   }
 
   displayRoom() {
-    console.log(this.rooms);
-
     const room = this.rooms[this.currentRoomId];
 
-    console.log(`\n${this.currentRoomId}`);
+    // console.log(`\n${this.currentRoomId}`);
     console.log(`${room.name}\n${room.description}`);
     console.log('Exits:');
 
     for (let key in room.exits) {
-      console.log(`- ${key} - ${room.exits[key]}`);
+      console.log(`- ${key}`);
     }
   }
 }

@@ -1,0 +1,227 @@
+{
+  "first-room-entrance-id": {
+    "id": "first-room-entrance-id",
+    "name": "Entrance",
+    "description": "You are in a dimly lit hallway.",
+    "exits": {
+      "n": "0eb1fdfe-4bfe-45d2-84b7-2f0b3fe15d7a",
+      "e": "618c106b-69c2-4ae3-afc6-b351fb875d78",
+      "s": "9eb03049-7cfc-42a8-8bd2-65c0876d2533",
+      "w": "239ff6a6-43e6-4de2-b4c2-66bff57a19ff"
+    }
+  },
+  "0eb1fdfe-4bfe-45d2-84b7-2f0b3fe15d7a": {
+    "id": "0eb1fdfe-4bfe-45d2-84b7-2f0b3fe15d7a",
+    "name": "Flickering Antechamber",
+    "description": "The air is heavy with the scent of old candles as you enter a small, ornate chamber. The walls are adorned with faded tapestries, and a chandelier hangs precariously from the vaulted ceiling, its crystals reflecting the faint, golden glow of candelabras that line the walls. Shadows dance across the room, cast by the fluttering flames.",
+    "exits": {
+      "s": "first-room-entrance-id"
+    }
+  },
+  "618c106b-69c2-4ae3-afc6-b351fb875d78": {
+    "id": "618c106b-69c2-4ae3-afc6-b351fb875d78",
+    "name": "Intersection of Shadows",
+    "description": "The darkness seems to thicken here, as if the shadows themselves are alive and watching. The walls, adorned with cobweb-covered portraits, appear to close in around you, making the air feel heavy and stagnant. A chandelier, its crystals dulled by years of grime, hangs precariously from the water-stained ceiling, casting flickering shadows across the room.",
+    "exits": {
+      "e": "224bba61-46ae-420b-a2fe-ccc605a05c6f",
+      "w": "first-room-entrance-id"
+    }
+  },
+  "224bba61-46ae-420b-a2fe-ccc605a05c6f": {
+    "id": "224bba61-46ae-420b-a2fe-ccc605a05c6f",
+    "name": "Fading Grandeur Hallway",
+    "description": "A long, dimly lit hallway stretches out before you, the walls lined with fading portraits of forgotten nobles. The once-opulent carpet, now worn and frayed, whispers secrets of bygone eras underfoot. Dusty candelabras, their tapers long extinguished, stand like sentinels along the walls, while the high ceiling, adorned with faded frescoes, seems to disappear into the shadows.",
+    "exits": {
+      "s": "502237fa-5ead-4563-8cc0-26be98492f57",
+      "w": "618c106b-69c2-4ae3-afc6-b351fb875d78"
+    }
+  },
+  "239ff6a6-43e6-4de2-b4c2-66bff57a19ff": {
+    "id": "239ff6a6-43e6-4de2-b4c2-66bff57a19ff",
+    "name": "Flickering Corridor",
+    "description": "The air is thick with the scent of old torches as the flames that cast eerie shadows on the walls seem to dance in the darkness. The stone floor beneath your feet is worn smooth, a testament to the countless footsteps that have traversed this passage. Cobweb-shrouded tapestries cling to the walls, their faded grandeur a reminder of a bygone era.",
+    "exits": {
+      "e": "first-room-entrance-id"
+    }
+  },
+  "9eb03049-7cfc-42a8-8bd2-65c0876d2533": {
+    "id": "9eb03049-7cfc-42a8-8bd2-65c0876d2533",
+    "name": "Flickering Landing",
+    "description": "A narrow landing stretches out before you, the walls adorned with faded portraits that seem to loom in the faint, dancing flame-light of a lone candelabra. The air is heavy with the scent of old wax and forgotten memories.",
+    "exits": {
+      "n": "first-room-entrance-id",
+      "e": "4d3b9bba-6f6b-4275-b347-b99f61b72d88",
+      "w": "a6384265-f997-4eb4-9a8d-8eb0d789ac8b"
+    }
+  },
+  "4d3b9bba-6f6b-4275-b347-b99f61b72d88": {
+    "id": "4d3b9bba-6f6b-4275-b347-b99f61b72d88",
+    "name": "Forgotten Gallery",
+    "description": "A grand, high-ceilinged room unfolds before you, its walls lined with rows of cobweb-shrouded portraits that seem to whisper secrets in the flickering light of candelabras set into ornate gilded brackets. Dust motes dance in the faint, golden glow, casting an air of forgotten opulence over the space.",
+    "exits": {
+      "s": "104990d1-337b-432c-b4eb-1c9e8b788d7f",
+      "w": "9eb03049-7cfc-42a8-8bd2-65c0876d2533"
+    }
+  },
+  "104990d1-337b-432c-b4eb-1c9e8b788d7f": {
+    "id": "104990d1-337b-432c-b4eb-1c9e8b788d7f",
+    "name": "The Forgotten Library",
+    "description": "The room is a labyrinthine repository of ancient knowledge, with towering shelves that stretch towards the vaulted ceiling, each one bowed under the weight of dusty tomes and forgotten scrolls. The air is thick with the scent of aged paper and forgotten wisdom, and the soft, golden light that filters through the grimy windows casts an eerie glow over the rows of shelves. The walls, adorned with intricate wooden paneling, seem to whisper secrets of their own, their dark, polished surfaces reflecting the faint, flickering light that filters through the room.",
+    "exits": {
+      "n": "4d3b9bba-6f6b-4275-b347-b99f61b72d88",
+      "w": "deaaca38-717f-484b-839d-65b74f916267"
+    }
+  },
+  "deaaca38-717f-484b-839d-65b74f916267": {
+    "id": "deaaca38-717f-484b-839d-65b74f916267",
+    "name": "The Scriptorium",
+    "description": "A narrow, dimly lit corridor opens up into a cozy, intimate space, where a elegant wooden desk dominates the room, surrounded by comfortable, worn leather chairs. The walls, adorned with the same intricate wooden paneling as the repository, seem to shrink the space, making it feel like a secluded alcove. The golden light, now softer and more muted, filters through a small, round window set high in the wall, casting a warm, comforting glow over the room. The air is heavy with the scent of old books, yet it's tempered by the faint aroma of freshly brewed tea, and the faint hint of pipe smoke.",
+    "exits": {
+      "e": "104990d1-337b-432c-b4eb-1c9e8b788d7f",
+      "s": "13167221-411f-4845-a0a8-f560bfe85e8f"
+    }
+  },
+  "13167221-411f-4845-a0a8-f560bfe85e8f": {
+    "id": "13167221-411f-4845-a0a8-f560bfe85e8f",
+    "name": "Library Nook",
+    "description": "A step down from the adjacent study, this snug, carpeted nook feels like a secluded haven. Floor-to-ceiling shelves, crafted from the same rich, dark wood as the paneling, line the walls, their laden shelves a treasure trove of leather-bound tomes. Comfortable, oversized armchairs are arranged around a low, ornate table, where a delicate, porcelain tea set sits, as if waiting for a impromptu gathering. The soft, golden light from above, now filtered through a beautiful, stained glass skylight, infuses the space with warmth, and the subtle, sweet scent of old parchment wafts through the air.",
+    "exits": {
+      "n": "deaaca38-717f-484b-839d-65b74f916267"
+    }
+  },
+  "a6384265-f997-4eb4-9a8d-8eb0d789ac8b": {
+    "id": "a6384265-f997-4eb4-9a8d-8eb0d789ac8b",
+    "name": "The Forgotten Gallery",
+    "description": "You step into a grand, high-ceilinged chamber, the walls of which are lined with rows of dusty, cobweb-shrouded paintings. The flickering candles, set into ornate gilded sconces, cast eerie shadows on the walls as they dance in the still air. The room's centerpiece is a sweeping staircase, its carpeted steps curving gracefully upward into darkness.",
+    "exits": {
+      "e": "9eb03049-7cfc-42a8-8bd2-65c0876d2533",
+      "w": "6b405668-454f-4073-85c4-36f8a9e6a052"
+    }
+  },
+  "6b405668-454f-4073-85c4-36f8a9e6a052": {
+    "id": "6b405668-454f-4073-85c4-36f8a9e6a052",
+    "name": "The Upper Landing",
+    "description": "You emerge onto a narrow, carpeted landing that wraps around the upper reaches of the grand staircase. The air is thick with the scent of old fabric and dust. A series of tall, narrow windows pierce the walls, admitting slices of faint, gray light that struggle to penetrate the gloom. The walls here are adorned with faded portraits, their subjects' faces whisper-thin and ghostly in the dim illumination.",
+    "exits": {
+      "e": "a6384265-f997-4eb4-9a8d-8eb0d789ac8b",
+      "s": "3427382a-6f12-4c24-b33b-c47596e506bf",
+      "w": "ef98585b-af57-4a73-8b3b-afe695efae47"
+    }
+  },
+  "3427382a-6f12-4c24-b33b-c47596e506bf": {
+    "id": "3427382a-6f12-4c24-b33b-c47596e506bf",
+    "name": "Upper Gallery",
+    "description": "You step into a long, curved corridor that follows the sweep of the grand staircase. The same faded portraits that adorned the landing continue here, their ghostly subjects watching over the dimly lit space. The carpet underfoot gives way to polished wood, and the tall windows that punctuated the landing now become a series of elegant, arched doorways that line the outer wall, their heavy drapery pulled back to reveal glimpses of a gray, uncertain sky.",
+    "exits": {
+      "n": "6b405668-454f-4073-85c4-36f8a9e6a052",
+      "w": "2bb9fa4c-ba13-4b11-a531-53e820c2a18c"
+    }
+  },
+  "2bb9fa4c-ba13-4b11-a531-53e820c2a18c": {
+    "id": "2bb9fa4c-ba13-4b11-a531-53e820c2a18c",
+    "name": "The Library Nook",
+    "description": "A cozy, intimate space tucked between the curves of the grand staircase. Tall, freestanding shelves, laden with dusty tomes and leather-bound volumes, create a sense of seclusion, while the warm, golden glow of table lamps casts a comforting light on the polished wood floor. The walls, adorned with more faded portraits, seem to close in, enveloping you in a sense of quiet contemplation.",
+    "exits": {
+      "n": "8d9182b7-523d-40f4-88d5-cba9affc7655",
+      "e": "3427382a-6f12-4c24-b33b-c47596e506bf",
+      "w": "52eabca1-eda1-4850-bb27-becdbd665863"
+    }
+  },
+  "52eabca1-eda1-4850-bb27-becdbd665863": {
+    "id": "52eabca1-eda1-4850-bb27-becdbd665863",
+    "name": "Library Nook",
+    "description": "A slender corridor of bookshelves stretches outward, casting long, rectangular shadows across the floors. The walls, adorned with faded portraits, continue from the previous room, creating an unbroken sense of tranquility. The polished wood floor extends, now reflecting the soft, golden light that filters in from above, casting a warm ambiance over the space.",
+    "exits": {
+      "e": "2bb9fa4c-ba13-4b11-a531-53e820c2a18c",
+      "s": "6af788af-7e54-4dc0-b140-a88322c84673",
+      "w": "17022155-d60b-4418-95cd-abe29da18356"
+    }
+  },
+  "502237fa-5ead-4563-8cc0-26be98492f57": {
+    "id": "502237fa-5ead-4563-8cc0-26be98492f57",
+    "name": "The Forgotten Antechamber",
+    "description": "A small, ornate chamber lies before you, its walls adorned with intricate paneling that seems to glow with a soft, golden light. The air is heavy with the scent of aged leather, and the faint outline of a long-abandoned reception area lingers, accompanied by the remnants of a grand, sweeping staircase that curves upward into the darkness. Faded, crimson curtains, their tassels worn and frayed, frame a tall, arched window that filters the light, casting an eerie, warm glow across the room.",
+    "exits": {
+      "n": "224bba61-46ae-420b-a2fe-ccc605a05c6f"
+    }
+  },
+  "ef98585b-af57-4a73-8b3b-afe695efae47": {
+    "id": "ef98585b-af57-4a73-8b3b-afe695efae47",
+    "name": "The Forgotten Gallery",
+    "description": "You find yourself in a long, dimly lit corridor, the walls of which are lined with cobweb-shrouded portraits, their gilded frames glinting dully in the faint light. The air is heavy with the scent of decay and forgotten memories. The walls, once a rich velvet, now hang in tattered, faded folds, like the worn, velvety pelt of some ancient beast. The floor creaks beneath your feet, worn smooth by the passage of time.",
+    "exits": {
+      "e": "6b405668-454f-4073-85c4-36f8a9e6a052",
+      "s": "5ddcc0b0-0525-4af4-b961-4f81bbeb252e",
+      "w": "be6adc48-d985-42e5-a825-d8856f80e755"
+    }
+  },
+  "be6adc48-d985-42e5-a825-d8856f80e755": {
+    "id": "be6adc48-d985-42e5-a825-d8856f80e755",
+    "name": "Forgotten Antechamber",
+    "description": "A small, ornate room lies before you, its walls adorned with dusty, gemstone-tipped candelabras that cast flickering shadows on the walls. The air is stale, and the silence is oppressive, punctuated only by the faint creaks and groans of the old woodwork. A once-grand chandelier, now dulled by grime, hangs from the ceiling, its crystals dimly reflecting the faint light that filters in. The carpet, worn and faded, is a faded echo of the rich velvet that clad the walls of the corridor you left behind.",
+    "exits": {
+      "e": "ef98585b-af57-4a73-8b3b-afe695efae47"
+    }
+  },
+  "5ddcc0b0-0525-4af4-b961-4f81bbeb252e": {
+    "id": "5ddcc0b0-0525-4af4-b961-4f81bbeb252e",
+    "name": "Faded Antechamber",
+    "description": "You enter a lavish antechamber, the ceiling lost in darkness, its ornate plasterwork yellowed with age. The walls, once a deep crimson, now hang in faded, tattered folds, like a worn tapestry. A chandelier, its crystals cloudy with grime, hangs crookedly from the ceiling, casting a faint, eerie glow. The air is heavy with the scent of stagnation, and the floor, though polished, seems to whisper secrets of forgotten history.",
+    "exits": {
+      "n": "ef98585b-af57-4a73-8b3b-afe695efae47"
+    }
+  },
+  "8d9182b7-523d-40f4-88d5-cba9affc7655": {
+    "id": "8d9182b7-523d-40f4-88d5-cba9affc7655",
+    "name": "Upper Landing",
+    "description": "As you step up into this spacious landing, the grand staircase unfolds before you, its curved railing swooping upward like a majestic wave. The walls, adorned with faded portraits, seem to stretch upward, meeting the high, vaulted ceiling, which is painted a soft, creamy hue. The air is thick with the scent of old books and dusty memories, and the warmth of table lamps casts a comforting glow over the polished wood floor, creating a sense of tranquility.",
+    "exits": {
+      "s": "2bb9fa4c-ba13-4b11-a531-53e820c2a18c"
+    }
+  },
+  "6af788af-7e54-4dc0-b140-a88322c84673": {
+    "id": "6af788af-7e54-4dc0-b140-a88322c84673",
+    "name": "The Grand Reading Nook",
+    "description": "A spacious, high-ceilinged chamber unfolds, its walls lined with towering bookcases that seem to stretch up to the ornate, cream-colored molding. Comfortable, velvet-upholstered armchairs are arranged in a semi-circle, surrounding a grand, granite-topped reading table. Above, a magnificent, crystal-droplet chandelier refracts the soft, golden light, casting tiny, shimmering rainbows across the room's plush, crimson carpet.",
+    "exits": {
+      "n": "52eabca1-eda1-4850-bb27-becdbd665863",
+      "w": "770876f3-86b1-45bd-bee2-0880e6dbbb44"
+    }
+  },
+  "3d2d1d42-5048-4b9e-81b4-6d06ae3b9eed": {
+    "id": "3d2d1d42-5048-4b9e-81b4-6d06ae3b9eed",
+    "name": "Entrance Hall",
+    "description": "A grand entrance hall stretches out before you, with a high, vaulted ceiling that seems to disappear into darkness. The walls are adorned with intricate stone carvings, depicting scenes of mythical creatures and heroes of old. A sweeping staircase curls upward to the left, while a doorway to the north appears to lead deeper into the complex. The air is thick with the scent of old dust and forgotten memories.",
+    "exits": {
+      "n": "c1fd3c10-d0f6-4e4a-ba9d-be6dd8560089",
+      "e": "6683f873-3287-4bd1-b882-7542f93b0a62",
+      "s": "770876f3-86b1-45bd-bee2-0880e6dbbb44"
+    }
+  },
+  "770876f3-86b1-45bd-bee2-0880e6dbbb44": {
+    "id": "770876f3-86b1-45bd-bee2-0880e6dbbb44",
+    "name": "The Librarian's Alcove",
+    "description": "A compact, intimate space, tucked away from the grandeur of the main chamber. Walnut paneling wraps around the room, and the air is thick with the scent of old parchment. A stately, leather-topped desk, adorned with intricate, silver hardware, occupies the room's center, surrounded by neat, stacks of manuscripts and scattered sheets of vellum. Above, a delicate, crystal sconce casts a warm, golden glow, illuminating the gentle, curved lines of a nearby, wooden banker's chair.",
+    "exits": {
+      "n": "5d397f98-93a0-4d9b-a084-72a5c2720353",
+      "e": "6af788af-7e54-4dc0-b140-a88322c84673",
+      "w": "ad3c1700-ec2b-4c2c-baf4-2cca0ed759da"
+    }
+  },
+  "ad3c1700-ec2b-4c2c-baf4-2cca0ed759da": {
+    "id": "ad3c1700-ec2b-4c2c-baf4-2cca0ed759da",
+    "name": "The Scholar's Nook",
+    "description": "A narrow, softly lit corridor unfolds before you, its walls lined with towering, floor-to-ceiling bookshelves, their rich, dark wood grain mirroring the walnut paneling of the room you left behind. The air is heavy with the musty scent of aged texts, and the flickering light of candle-lanterns casts long shadows across the shelves, where row upon row of leather-bound tomes seem to stretch on forever.",
+    "exits": {
+      "e": "770876f3-86b1-45bd-bee2-0880e6dbbb44"
+    }
+  },
+  "5d397f98-93a0-4d9b-a084-72a5c2720353": {
+    "id": "5d397f98-93a0-4d9b-a084-72a5c2720353",
+    "name": "Scholar's Nook",
+    "description": "This cozy, angular room feels like a secluded alcove, its walls lined with towering, dark-stained bookshelves that seem to stretch up to the vaulted ceiling. The air is heavy with the musty scent of aged texts, and the faint, sweet aroma of aged leather wafts from the supple, crimson-hued bindings that adorn the shelves. A narrow, ornate table, its surface cluttered with scattered, yellowed pages and worn, quill pens, occupies the room's center, illuminated by a delicate, bronze lantern that hangs from the ceiling, casting a warm, golden light.",
+    "exits": {
+      "s": "770876f3-86b1-45bd-bee2-0880e6dbbb44"
+    }
+  }
+}

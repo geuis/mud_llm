@@ -1,3 +1,6 @@
+data/map.json
+data/room_images/*.jpg
+
 *.jpg
 
 # Logs

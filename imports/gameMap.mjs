@@ -69,13 +69,32 @@ class GameMap {
   }
 
   async displayRoom() {
+    // clear the terminal
+    console.clear();
+
     const room = this.rooms[this.currentRoomId];
 
-    // console.log(`\n${this.currentRoomId}`);
-    console.log(`${room.name}\n${room.description}`);
+    console.log(`--!! ${room.name} !!--\n`);
+
+    const description = room.description.split(' ').reduce((acc, word) => {
+      const line = acc[acc.length - 1] + ' ' + word;
+
+      if (line.length <= 80) {
+        acc[acc.length - 1] = line.trim();
+      } else {
+        acc.push(word);
+      }
+
+      return acc;
+    }, ['']);
+
+    for (let line of description) {
+      console.log(line);
+    }
+
+    console.log('');
 
     console.log(await terminalImage.file(`./data/room_images/${room.id}.jpg`, { width: '50%', height: '50%' }));
-
     console.log('Exits:');
 
     for (let key in room.exits) {

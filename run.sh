@@ -28,7 +28,8 @@ cleanup() {
 trap cleanup SIGINT SIGTERM
 
 # Start the FastAPI server in the background using nohup
-nohup fastapi run ./image_generation_api/api.py > fastapi.log 2>&1 &
+nohup fastapi dev ./image_generation_api/api.py > fastapi.log 2>&1 &
+# nohup fastapi run ./image_generation_api/api.py > fastapi.log 2>&1 &
 
 FASTAPI_PID=$!
 

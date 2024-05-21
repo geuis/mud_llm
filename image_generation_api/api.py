@@ -56,22 +56,13 @@ async def generate_image(prompt: Prompt):
 
     img_bytes = img_bytes.getvalue()
 
-# print(__file__)
-# data_imgs_dir = Path("../data/room_images").resolve()
-
-# print(data_imgs_dir)
-# print(f"{data_imgs_dir}/123.jpg")
-
-
-# file1 = open(f"{data_imgs_dir}/123.txt", "w")
-# s = "Hello\n"
-
-# # Writing a string to file
-# file1.write(s)
-
     # save the image to disk
-    data_imgs_dir = Path('../data/room_images').resolve()
-    print(f"{data_imgs_dir}/{roomId}.jpg")
+    current_file_directory = Path(__file__).resolve().parent
+    data_imgs_dir = current_file_directory.parent / 'data' / 'room_images'
+    print(data_imgs_dir)
+    
+    print(f"Saving image to {data_imgs_dir}/{roomId}.jpg")
+    
     image.save(f"{data_imgs_dir}/{roomId}.jpg")
 
     # Create a response object with the image data

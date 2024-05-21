@@ -10,10 +10,22 @@ const generateRoomImage = async (description = '', id = null) => {
       body: JSON.stringify({ description, id })
     });
 
-    const data = await result.json();
-
-    return data;
+    if (result.status === 200) {
+      const data = await result.json();
+  
+      return {
+        success: true,
+        data
+      };
+    } else {
+      return {
+        success: false
+      }
+    }
   } catch (err) {
+    console.error('generateRoomImage error:', err);
+    console.error(err.message);
+
     throw err;
   }
 };

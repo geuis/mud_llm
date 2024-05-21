@@ -2,6 +2,7 @@ data/map.json
 data/room_images/*.jpg
 
 *.jpg
+old_maps/
 
 # Logs
 logs
